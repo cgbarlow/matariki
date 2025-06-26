@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matariki Stellar Navigator - Phase 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <header>
+            <h1>Matariki Stellar Navigator</h1>
+        </header>
+        
+        <main id="gameArea">
+            <div id="starImageContainer" class="no-star-selected">
+                <div id="starImageContent" class="hidden">
+                    <img id="starImage" src="" alt="Star representation">
+                    <h3 id="starName"></h3>
+                    <p id="starMeaning"></p>
+                </div>
+                <div id="progressTracker">
+                    <h4 id="nextStarTitle">Current objective:<br><span class="find-text">Find Waitī</span></h4>
+                    <div id="progressBar"><div id="progressFill"></div></div>
+                    <span id="progressText">0/9 stars discovered</span>
+                    <button id="hintBtn">💡 Hint</button>
+                </div>
+            </div>
+            
+            <canvas id="starCanvas" width="800" height="600"></canvas>
+            
+            <div id="culturalPanel" class="panel">
+                <div id="instructions">
+                    <h3>Kia ora! Welcome to Matariki</h3>
+                    <p>Find each star in the correct sequence to learn about the Matariki constellation.</p>
+                    <p><strong>Tip:</strong> Click on discovered stars (with colored rings) to review their information!</p>
+                </div>
+                
+                <div id="starInfo" class="hidden">
+                    <div id="starInfoContent">
+                        <div id="starStory" class="hidden"></div>
+                        <div id="starCultural" class="hidden"></div>
+                    </div>
+                </div>
+                
+                
+                <div id="completionPanel" class="hidden">
+                    <h3>Kia ora! You've completed Matariki!</h3>
+                    <p>You have successfully formed the sacred constellation and learned about the cultural significance of each star.</p>
+                    <button id="resetBtn">Reset</button>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Built with respect for Māori culture and traditions</p>
+        </footer>
+    </div>
+    
+    <script src="starData.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
